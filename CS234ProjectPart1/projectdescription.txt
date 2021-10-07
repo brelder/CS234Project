@@ -1,0 +1,8 @@
+ENMU
+CS 234
+Dr. Varela
+Project: Eastern New Mexico Retro Paradise
+
+Description: Our project is a program for customer, inventory and sales management for a retro video game store named Eastern New Mexico Retro Paradise. The program will have a searchable database of the inventory of the store (consoles, games, accessories, etc.) and a searchable database of customers, which will include personal and contact details and the total points the client’s have earned based on dollars spent. At a certain point level, clients can upgrade their accounts to Silver and eventually Gold level, which include coupons that can be used at the store. The upgrade system for client accounts will use inheritance to move the client’s information into the higher class. 
+
+The system is designed to be used by employees to makes sales to customers, log purchases from customers to add to the store's inventory, and to check on the status of a client's account. The system will keep a persistent record of all changes made to client information and current inventory levels based on sales and purchases made.
