@@ -202,20 +202,15 @@ public class projectMain {
 	
 							System.out.println("What is their current point total? ");
 							int points = in.nextInt();
-						
-                                                        
-                                                       
-                                                       for (Iterator<customer> iterator = customers.iterator(); iterator.hasNext();)
-                                                       {
-								if (iterator.next().accountID == maccountID) 
-                                                                {
-								customer mcust = iterator.next();
-                                                                int i = customers.indexOf(mcust) - 1;
-                                                                customers.set(i, new customer(maccountID, name, phoneNumber, points));
-                                                                
-								} 
-                                                       }
-                                                            break;
+
+							for (Iterator<customer> iterator = customers.iterator(); iterator.hasNext();){ //start of the iterator
+							       if (iterator.next().accountID == maccountID){
+								       customer mcust = iterator.next();
+								       int i = customers.indexOf(mcust) - 1;
+								       customers.set(i, new customer(maccountID, name, phoneNumber, points));
+								} //end of iterator
+							}
+							break;
                                                     }//end of modify block
             
 						case "p": { //start of print block
@@ -282,16 +277,13 @@ public class projectMain {
 							int wage = in.nextInt();
 					
 							for (Iterator<employee> iterator = employees.iterator(); iterator.hasNext();) {
-                                                                employee memp = iterator.next();
-								if (memp.employeeID == memployeeID) 
-                                                                {
-                                                                int wksales = memp.weeklySales;
-                                                                int i = employees.indexOf(memp);
-                                                                employees.set(i, new employee(memployeeID, name, phoneNumber, wage, wksales));
-                                                                
-								} 
-                                                       
-                                                        }
+								employee memp = iterator.next();
+								if (memp.employeeID == memployeeID){ 
+									int wksales = memp.weeklySales;
+									int i = employees.indexOf(memp);
+									employees.set(i, new employee(memployeeID, name, phoneNumber, wage, wksales));
+								}
+							}
 							break;
 						} //end of modify block
             
